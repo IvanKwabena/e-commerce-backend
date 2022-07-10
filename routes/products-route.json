@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "62bc2c20e201a04917d516a7"
+  },
+  "name": "iphone X",
+  "description": "Apple ",
+  "richDescription": "Very neat and Fresh in Box",
+  "image": "http://localhost:7000/public/uploads/iphone.jpg-1656499232484.jpeg",
+  "images": [],
+  "brand": "Apple",
+  "price": 2300,
+  "category": {
+    "$oid": "6295900c5404831a64310b1e"
+  },
+  "countInStock": 10,
+  "rating": 0,
+  "numReviews": 0,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": {
+      "$numberLong": "1656499232712"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bc607cae50132432431832"
+  },
+  "name": "Apple",
+  "description": "Iphone X",
+  "richDescription": "Very neat and Fresh in Box",
+  "image": "http://localhost:7000/public/uploads/iphone-- Copy.jpg-1657058843497.jpeg",
+  "images": [],
+  "brand": "Apple",
+  "price": 2300,
+  "category": {
+    "$oid": "6295900c5404831a64310b1e"
+  },
+  "countInStock": 10,
+  "rating": 0,
+  "numReviews": 0,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": {
+      "$numberLong": "1656512636188"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c74d9a83ad8ff9bc9078d6"
+  },
+  "name": "Samsung",
+  "description": "Best Android",
+  "richDescription": "Very neat and Fresh in Box",
+  "image": "http://localhost:7000/public/uploads/iphone-- Copy.jpg-1657228802035.jpeg",
+  "images": [
+    "http://localhost:7000/public/uploads/iphone-- Copy.jpg-1657229610768.jpeg",
+    "http://localhost:7000/public/uploads/iphone.jpg-1657229610825.jpeg"
+  ],
+  "brand": "Apple",
+  "price": 2300,
+  "category": {
+    "$oid": "6295900c5404831a64310b1e"
+  },
+  "countInStock": 10,
+  "rating": 0,
+  "numReviews": 0,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": {
+      "$numberLong": "1657228698727"
+    }
+  },
+  "__v": 0
+}]

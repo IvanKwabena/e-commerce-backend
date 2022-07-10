@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "62958d5b7bd687b5dad45028"
+  },
+  "name": "Drinks",
+  "icon": " small_ drink",
+  "color": " #FFF00",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6295900c5404831a64310b1e"
+  },
+  "name": "Electricals",
+  "icon": " smallIcon",
+  "color": " red",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "629cf52907fd59a9eb1d058f"
+  },
+  "name": "Giants",
+  "icon": "icon_giants",
+  "color": " #FFF1100",
+  "__v": 0
+}]

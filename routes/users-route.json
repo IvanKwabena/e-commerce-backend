@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "629d1fc8cf171445a3a1b0d9"
+  },
+  "name": "Ivan",
+  "email": "ivan@gmail.com",
+  "passwordHash": "12344",
+  "phone": "054 166 5787",
+  "isAdmin": false,
+  "street": "Agape 101",
+  "apartment": "Floor 245",
+  "zip": " ",
+  "city": "Accra",
+  "country": "Ghana",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "629d2477a5877c3454d4445f"
+  },
+  "name": "Coder",
+  "email": "coder@gmail.com",
+  "passwordHash": "$2a$10$zHwi17A12PWNKLxCObUP5.y6tWG4m8gEWQvUBOzZmcyZJJggrlS2W",
+  "phone": "050 466 5787",
+  "isAdmin": true,
+  "street": "Agape 101",
+  "apartment": "Floor 245",
+  "zip": " ",
+  "city": "Accra",
+  "country": "Ghana",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62aa0521257d5e1bd7598444"
+  },
+  "name": "temp",
+  "email": "temp@gmail.com",
+  "passwordHash": "$2a$10$FzeX/epKnVlKFoXUcrJkeO7QkX9iFhm1c9xbktHZ7sSPLRuhhT3mu",
+  "phone": "050 466 5787",
+  "isAdmin": false,
+  "street": "Agape 101",
+  "apartment": "Floor 245",
+  "zip": " ",
+  "city": "Accra",
+  "country": "Ghana",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62be159832da4cdd074638e0"
+  },
+  "name": "temp11",
+  "email": "temp11@gmail.com",
+  "passwordHash": "$2a$10$el0kYhzPupu2um.OEqAgseKgQv0Kw/Q3vK8q2KNqyk4XYQ5XRxvla",
+  "phone": "050 466 5787",
+  "isAdmin": false,
+  "street": "Agape 101",
+  "apartment": "Floor 245",
+  "zip": " ",
+  "city": "Accra",
+  "country": "Ghana",
+  "__v": 0
+}]
