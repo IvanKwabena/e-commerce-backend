@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
 app.use(errorHandler);
-app.use('/public/uploads', express.static(`${__dirname}/public/uploads`)); // 
+app.use('/public/uploads', express.static(`${__dirname}/public/uploads`)); //
 
 app.use(`${apiUrl}/products`, productRouter);
 app.use(`${apiUrl}/categories`, categoryRouter);
@@ -36,7 +36,7 @@ mongoose
   .connect(process.env.MONGO_APIKEY, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    dbName: 'e-commerce',
+    dbName: process.env.DB_NAME,
   })
   .then(() => {
     console.log('Connected to database');
@@ -45,7 +45,9 @@ mongoose
     console.log(err);
   });
 
+const PORT = process.env.PORT || 7000;
+
 // port to listen
-app.listen(7000, () => {
+app.listen(PORT, () => {
   console.log('Server running at http://localhost:7000/');
 });
