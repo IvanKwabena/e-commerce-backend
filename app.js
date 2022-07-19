@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
@@ -23,7 +24,9 @@ app.use(express.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
 app.use(errorHandler);
-app.use('/public/uploads', express.static(`${__dirname}/public/uploads`)); //
+app.use('/public/uploads', express.static(path.join(__dirname, './public/uploads'))); //
+
+// app.use(path.join(__dirname), )
 
 app.use(`${apiUrl}/products`, productRouter);
 app.use(`${apiUrl}/categories`, categoryRouter);
@@ -41,13 +44,16 @@ mongoose
   .then(() => {
     console.log('Connected to database');
   })
-  .catch((err) => {
-    console.log(err);
+  .catch((error) => {
+    console.log('database connection failed. exiting now...');
+    console.error(error);
+    process.exit(1);
   });
 
 const PORT = process.env.PORT || 7000;
 
 // port to listen
 app.listen(PORT, () => {
+
   console.log('Server running at http://localhost:7000/');
 });

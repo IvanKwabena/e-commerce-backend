@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Product = require('../models/product');
 const Category = require('../models/category');
 const uploadOptions = require('../helpers/multer');
+const { isAdmin } = require('../helpers/jwt');
 
 const router = express.Router();
 
@@ -27,6 +28,8 @@ router.get('/:id', async (req, res) => {
   if (!mongoose.isValidObjectId(productId)) {
     return res.status(400).send('Invalid ID passed by user URL');
   }
+
+  // console.log();
 
   const product = await Product.findById(productId).populate('category');
 
@@ -60,7 +63,7 @@ router.get('/get/featured/:count', async (req, res) => {
 });
 
 // Post a Product
-router.post('/', uploadOptions.single('image'), async (req, res) => {
+router.post('/', isAdmin, uploadOptions.single('image'), async (req, res) => {
   const category = await Category.findById(req.body.category);
   if (!category) return res.status(400).send('Invalid Category');
 
@@ -69,6 +72,7 @@ router.post('/', uploadOptions.single('image'), async (req, res) => {
 
   const fileName = file.filename;
   const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
+  
   let product = new Product({
     name: req.body.name,
     description: req.body.description,
@@ -159,7 +163,6 @@ router.put(
   '/gallery-images/:id',
   uploadOptions.array('images', 10),
   async (req, res) => {
-    
     if (!mongoose.isValidObjectId(req.params.id)) {
       return res.status(400).send('Invalid Product Id');
     }
@@ -187,6 +190,5 @@ router.put(
     res.send(product);
   }
 );
-
 
 module.exports = router;
