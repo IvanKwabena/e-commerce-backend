@@ -14,6 +14,7 @@ const { authJwt } = require('./helpers/jwt');
 const errorHandler = require('./helpers/error_handler');
 
 const apiUrl = process.env.API_URL;
+const publicPath = path.join(__dirname, './public/uploads');
 const app = express();
 
 // middlewares
@@ -24,9 +25,8 @@ app.use(express.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
 app.use(errorHandler);
-app.use('/public/uploads', express.static(path.join(__dirname, './public/uploads'))); //
+app.use('/public/uploads', express.static(publicPath)); //
 
-// app.use(path.join(__dirname), )
 
 app.use(`${apiUrl}/products`, productRouter);
 app.use(`${apiUrl}/categories`, categoryRouter);
